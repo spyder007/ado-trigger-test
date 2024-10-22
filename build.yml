@@ -22,8 +22,8 @@ steps:
 
 # If it's a PR or a build from main (not a tag) then don't publish to Nuget
 - ${{ if or(eq(variables['Build.Reason'], 'PullRequest'), eq(variables['Build.SourceBranchName'], 'main')) }}:
-  script: |
-    echo "this is a PR Build - no nuget"
+  - script: |
+      echo "this is a PR Build - no nuget"
 - ${{ else }}:
-  script: |
-    echo "this is a feature or tag build - push nuget"
+  - script: |
+      echo "this is a feature or tag build - push nuget"
