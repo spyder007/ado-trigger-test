@@ -8,6 +8,9 @@ trigger:
 pr:
 - main
 
+pool:
+  name: Default
+
 steps:
 - pwsh: |
     Write-Host "$(Build.BuildReason)"
