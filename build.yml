@@ -13,6 +13,6 @@ pool:
 
 steps:
 - script: |
-    echo $(Build.BuildReason)
+    echo $(Build.Reason)
     echo $(Build.SourceBranchName)
     echo $(Build.SourceBranch)
