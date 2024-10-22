@@ -12,7 +12,7 @@ pool:
   name: Default
 
 steps:
-- pwsh: |
-    Write-Host "$(Build.BuildReason)"
-    Write-Host "$(Build.SourceBranchName)" 
-    Write-Host "$(Build.SourceBranch)"
+- script: |
+    echo $(Build.BuildReason)
+    echo $(Build.SourceBranchName)
+    echo $(Build.SourceBranch)
