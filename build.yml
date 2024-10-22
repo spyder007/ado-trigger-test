@@ -1,0 +1,15 @@
+trigger:
+  tags:
+    include:
+    - "*"
+  branches:
+    include:
+    - feature/*
+pr:
+- main
+
+steps:
+- pwsh: |
+    Write-Host "$(Build.BuildReason)"
+    Write-Host "$(Build.SourceBranchName)" 
+    Write-Host "$(Build.SourceBranch)"
